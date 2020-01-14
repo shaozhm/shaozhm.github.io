@@ -1,0 +1,777 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>XSODATA - HANA XSC 基础培训</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#demoxsodata-zhimindemoservicesdemoxsodata" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="HANA XSC 基础培训" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              HANA XSC 基础培训
+            </span>
+            <span class="md-header-nav__topic">
+              
+                XSODATA
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.wdf.sap.corp/ZhiminJenkins/docs" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    ZhiminJenkins/docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="HANA XSC 基础培训" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    HANA XSC 基础培训
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.wdf.sap.corp/ZhiminJenkins/docs" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    ZhiminJenkins/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="建立开发环境" class="md-nav__link">
+      建立开发环境
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../xs-project/" title="XS项目文件及激活" class="md-nav__link">
+      XS项目文件及激活
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../db-getting-started/" title="HDBDD文件" class="md-nav__link">
+      HDBDD文件
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../data-load/" title="数据导入" class="md-nav__link">
+      数据导入
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        XSODATA
+      </label>
+    
+    <a href="./" title="XSODATA" class="md-nav__link md-nav__link--active">
+      XSODATA
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#demoxsodata-zhimindemoservicesdemoxsodata" class="md-nav__link">
+    建立文件 demo.xsodata (/zhimin/demo/services/demo.xsodata)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odata" class="md-nav__link">
+    访问 ODATA
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpzhiminipmizcom8000zhimindemoservicesdemoxsodata" class="md-nav__link">
+    http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odata-metadata-httpzhiminipmizcom8000zhimindemoservicesdemoxsodatametadata" class="md-nav__link">
+    ODATA metadata 信息 http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/$metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vehicle-entityset" class="md-nav__link">
+    查看 Vehicle EntitySet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-vehicle10000000" class="md-nav__link">
+    查看具体的 Entity - Vehicle(10000000)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entity-xsodata-258-insufficient-privilege" class="md-nav__link">
+    如果访问具体的 entity 出现 XSOdata [258] insufficient privilege 错误
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odata_1" class="md-nav__link">
+    ODATA 协议官方参考
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../view/" title="创建视图" class="md-nav__link">
+      创建视图
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../xsjs/" title="XSJS" class="md-nav__link">
+      XSJS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../modeling/" title="图形化建模 Calculation View" class="md-nav__link">
+      图形化建模 Calculation View
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../calculationview-odata/" title="ODATA for Calculation View" class="md-nav__link">
+      ODATA for Calculation View
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../scripted-modeling/" title="脚本建模 Calculation View" class="md-nav__link">
+      脚本建模 Calculation View
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#demoxsodata-zhimindemoservicesdemoxsodata" class="md-nav__link">
+    建立文件 demo.xsodata (/zhimin/demo/services/demo.xsodata)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odata" class="md-nav__link">
+    访问 ODATA
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpzhiminipmizcom8000zhimindemoservicesdemoxsodata" class="md-nav__link">
+    http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odata-metadata-httpzhiminipmizcom8000zhimindemoservicesdemoxsodatametadata" class="md-nav__link">
+    ODATA metadata 信息 http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/$metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vehicle-entityset" class="md-nav__link">
+    查看 Vehicle EntitySet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-vehicle10000000" class="md-nav__link">
+    查看具体的 Entity - Vehicle(10000000)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entity-xsodata-258-insufficient-privilege" class="md-nav__link">
+    如果访问具体的 entity 出现 XSOdata [258] insufficient privilege 错误
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odata_1" class="md-nav__link">
+    ODATA 协议官方参考
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>XSODATA</h1>
+                
+                <h2 id="demoxsodata-zhimindemoservicesdemoxsodata">建立文件 demo.xsodata (/zhimin/demo/services/demo.xsodata)</h2>
+<div class="codehilite"><pre><span></span><span class="nx">service</span> <span class="nx">namespace</span> <span class="s2">&quot;zhimin.demo.services&quot;</span>  <span class="p">{</span> 
+   <span class="s2">&quot;zhimin.demo.db::demo.VEHICLE&quot;</span> 
+   <span class="nx">as</span> <span class="s2">&quot;Vehicle&quot;</span>
+   <span class="nx">navigates</span> <span class="p">(</span><span class="s2">&quot;Vehicle_Fees&quot;</span> <span class="nx">as</span> <span class="s2">&quot;Fee&quot;</span><span class="p">);</span>
+
+   <span class="s2">&quot;zhimin.demo.db::demo.FEE&quot;</span> <span class="nx">as</span> <span class="s2">&quot;Fee&quot;</span><span class="p">;</span>
+
+   <span class="nx">association</span> <span class="s2">&quot;Vehicle_Fees&quot;</span> <span class="nx">principal</span> <span class="s2">&quot;Vehicle&quot;</span><span class="p">(</span><span class="s2">&quot;UID&quot;</span><span class="p">)</span> <span class="nx">multiplicity</span> <span class="s2">&quot;1&quot;</span> <span class="nx">dependent</span> <span class="s2">&quot;Fee&quot;</span><span class="p">(</span><span class="s2">&quot;REF_VEHICLE.UID&quot;</span><span class="p">)</span> <span class="nx">multiplicity</span> <span class="s2">&quot;*&quot;</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="nx">settings</span> <span class="p">{</span>
+    <span class="nx">metadata</span> <span class="nx">cache</span><span class="o">-</span><span class="nx">control</span> <span class="s2">&quot;max-age= 604800&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2 id="odata">访问 ODATA</h2>
+<h3 id="httpzhiminipmizcom8000zhimindemoservicesdemoxsodata">http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/</h3>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;service</span> <span class="na">xmlns:atom=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span> <span class="na">xmlns:app=</span><span class="s">&quot;http://www.w3.org/2007/app&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2007/app&quot;</span> <span class="na">xml:base=</span><span class="s">&quot;http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;workspace&gt;</span>
+    <span class="nt">&lt;atom:title&gt;</span>Default<span class="nt">&lt;/atom:title&gt;</span>
+    <span class="nt">&lt;collection</span> <span class="na">href=</span><span class="s">&quot;Vehicle&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;atom:title&gt;</span>Vehicle<span class="nt">&lt;/atom:title&gt;</span>
+    <span class="nt">&lt;/collection&gt;</span>
+    <span class="nt">&lt;collection</span> <span class="na">href=</span><span class="s">&quot;Fee&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;atom:title&gt;</span>Fee<span class="nt">&lt;/atom:title&gt;</span>
+    <span class="nt">&lt;/collection&gt;</span>
+ <span class="nt">&lt;/workspace&gt;</span>
+<span class="nt">&lt;/service&gt;</span>
+</pre></div>
+
+<h3 id="odata-metadata-httpzhiminipmizcom8000zhimindemoservicesdemoxsodatametadata">ODATA metadata 信息 http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/$metadata</h3>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;edmx:Edmx</span> <span class="na">xmlns:edmx=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2007/06/edmx&quot;</span> <span class="na">Version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;edmx:DataServices</span> <span class="na">xmlns:m=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2007/08/dataservices/metadata&quot;</span>     <span class="na">m:DataServiceVersion=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;Schema</span> <span class="na">xmlns:d=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2007/08/dataservices&quot;</span>         <span class="na">xmlns:m=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2007/08/dataservices/metadata&quot;</span>        <span class="na">xmlns=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2008/09/edm&quot;</span> <span class="na">Namespace=</span><span class="s">&quot;zhimin.demo.services&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;EntityType</span> <span class="na">Name=</span><span class="s">&quot;VehicleType&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;Key&gt;</span>
+                    <span class="nt">&lt;PropertyRef</span> <span class="na">Name=</span><span class="s">&quot;UID&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/Key&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;UID&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.Int32&quot;</span> <span class="na">Nullable=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;VIN&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;ENGINE_NO&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;18&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;PLATE_NUMBER&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;DOC_NUMBER&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;18&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;CARD_ID&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;18&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;MODEL&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;100&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;MAKER&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;100&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;LICENSE_VALID_FROM&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;LICENSE_VALID_TO&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;OP_CERT_NUMBER&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;OP_CERT_VALID_FROM&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;OP_CERT_VALID_TO&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;PURCHASE_DATE&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;DELETE_FLAG&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">DefaultValue=</span><span class="s">&quot;0&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;EFENCE_FLAG&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">DefaultValue=</span><span class="s">&quot;0&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;NavigationProperty</span> <span class="na">Name=</span><span class="s">&quot;Fee&quot;</span> <span class="na">Relationship=</span><span class="s">&quot;zhimin.demo.services.Vehicle_FeesType&quot;</span>             <span class="na">FromRole=</span><span class="s">&quot;VehiclePrincipal&quot;</span> <span class="na">ToRole=</span><span class="s">&quot;FeeDependent&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/EntityType&gt;</span>
+            <span class="nt">&lt;EntityType</span> <span class="na">Name=</span><span class="s">&quot;FeeType&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;Key&gt;</span>
+                    <span class="nt">&lt;PropertyRef</span> <span class="na">Name=</span><span class="s">&quot;UID&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/Key&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;UID&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">Nullable=</span><span class="s">&quot;false&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;32&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;REF_VEHICLE.UID&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.Int32&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;CREATED_ON&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;CREATED_BY&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;50&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;CHANGED_ON&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;CHANGED_BY&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;50&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;FEE_START_DATE&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;FEE_END_DATE&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;FEE&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.Double&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;CURRENCY_CODE&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">DefaultValue=</span><span class="s">&quot;CNY&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;Property</span> <span class="na">Name=</span><span class="s">&quot;DELETE_FLAG&quot;</span> <span class="na">Type=</span><span class="s">&quot;Edm.String&quot;</span> <span class="na">DefaultValue=</span><span class="s">&quot;0&quot;</span> <span class="na">MaxLength=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/EntityType&gt;</span>
+            <span class="nt">&lt;Association</span> <span class="na">Name=</span><span class="s">&quot;Vehicle_FeesType&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;End</span> <span class="na">Type=</span><span class="s">&quot;zhimin.demo.services.VehicleType&quot;</span> <span class="na">Role=</span><span class="s">&quot;VehiclePrincipal&quot;</span>    <span class="na">Multiplicity=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;End</span> <span class="na">Type=</span><span class="s">&quot;zhimin.demo.services.FeeType&quot;</span> <span class="na">Role=</span><span class="s">&quot;FeeDependent&quot;</span> <span class="na">Multiplicity=</span><span class="s">&quot;*&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/Association&gt;</span>
+            <span class="nt">&lt;EntityContainer</span> <span class="na">Name=</span><span class="s">&quot;demo&quot;</span> <span class="na">m:IsDefaultEntityContainer=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;EntitySet</span> <span class="na">Name=</span><span class="s">&quot;Vehicle&quot;</span> <span class="na">EntityType=</span><span class="s">&quot;zhimin.demo.services.VehicleType&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;EntitySet</span> <span class="na">Name=</span><span class="s">&quot;Fee&quot;</span> <span class="na">EntityType=</span><span class="s">&quot;zhimin.demo.services.FeeType&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;AssociationSet</span> <span class="na">Name=</span><span class="s">&quot;Vehicle_Fees&quot;</span>     <span class="na">Association=</span><span class="s">&quot;zhimin.demo.services.Vehicle_FeesType&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;End</span> <span class="na">Role=</span><span class="s">&quot;VehiclePrincipal&quot;</span> <span class="na">EntitySet=</span><span class="s">&quot;Vehicle&quot;</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;End</span> <span class="na">Role=</span><span class="s">&quot;FeeDependent&quot;</span> <span class="na">EntitySet=</span><span class="s">&quot;Fee&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/AssociationSet&gt;</span>
+            <span class="nt">&lt;/EntityContainer&gt;</span>
+        <span class="nt">&lt;/Schema&gt;</span>
+    <span class="nt">&lt;/edmx:DataServices&gt;</span>
+<span class="nt">&lt;/edmx:Edmx&gt;</span>
+</pre></div>
+
+<h3 id="vehicle-entityset">查看 Vehicle EntitySet</h3>
+<p>http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/Vehicle</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;feed</span> <span class="na">xml:base=</span><span class="s">&quot;http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>Vehicle<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;id&gt;</span>
+        http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/Vehicle
+    <span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;author&gt;</span>
+        <span class="nt">&lt;name/&gt;</span>
+    <span class="nt">&lt;/author&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;self&quot;</span> <span class="na">title=</span><span class="s">&quot;Vehicle&quot;</span> <span class="na">href=</span><span class="s">&quot;Vehicle&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;entry&gt;</span>
+        <span class="nt">&lt;id&gt;</span>
+            http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/Vehicle(10000000)
+        <span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;title</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;author&gt;</span>
+            <span class="nt">&lt;name/&gt;</span>
+        <span class="nt">&lt;/author&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;edit&quot;</span> <span class="na">title=</span><span class="s">&quot;Vehicle&quot;</span> <span class="na">href=</span><span class="s">&quot;Vehicle(10000000)&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2007/08/dataservices/related/Fee&quot;</span>       <span class="na">type=</span><span class="s">&quot;application/atom+xml;type=feed&quot;</span> <span class="na">title=</span><span class="s">&quot;Fee&quot;</span> <span class="na">href=</span><span class="s">&quot;Vehicle(10000000)/Fee&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;category</span> <span class="na">term=</span><span class="s">&quot;zhimin.demo.services.VehicleType&quot;</span>       <span class="na">scheme=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2007/08/dataservices/scheme&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;content</span> <span class="na">type=</span><span class="s">&quot;application/xml&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;m:properties&gt;</span>
+                <span class="nt">&lt;d:UID</span> <span class="na">m:type=</span><span class="s">&quot;Edm.Int32&quot;</span><span class="nt">&gt;</span>10000000<span class="nt">&lt;/d:UID&gt;</span>
+                <span class="nt">&lt;d:VIN</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>LFWSRXSJ4KAD14686<span class="nt">&lt;/d:VIN&gt;</span>
+                <span class="nt">&lt;d:ENGINE_NO</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>53170940<span class="nt">&lt;/d:ENGINE_NO&gt;</span>
+                <span class="nt">&lt;d:PLATE_NUMBER</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>豫NR5926<span class="nt">&lt;/d:PLATE_NUMBER&gt;</span>
+                <span class="nt">&lt;d:DOC_NUMBER</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>411401082943<span class="nt">&lt;/d:DOC_NUMBER&gt;</span>
+                <span class="nt">&lt;d:CARD_ID</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>4150028005042<span class="nt">&lt;/d:CARD_ID&gt;</span>
+                <span class="nt">&lt;d:MODEL</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>重型半挂牵引车<span class="nt">&lt;/d:MODEL&gt;</span>
+                <span class="nt">&lt;d:MAKER</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>解放<span class="nt">&lt;/d:MAKER&gt;</span>
+                <span class="nt">&lt;d:LICENSE_VALID_FROM</span>       <span class="na">m:type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">&gt;</span>2019-04-17T00:00:00.0000000<span class="nt">&lt;/d:LICENSE_VALID_FROM&gt;</span>
+                <span class="nt">&lt;d:LICENSE_VALID_TO</span>     <span class="na">m:type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">&gt;</span>2020-04-01T00:00:00.0000000<span class="nt">&lt;/d:LICENSE_VALID_TO&gt;</span>
+                <span class="nt">&lt;d:OP_CERT_NUMBER</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>411406000775<span class="nt">&lt;/d:OP_CERT_NUMBER&gt;</span>
+                <span class="nt">&lt;d:OP_CERT_VALID_FROM</span>       <span class="na">m:type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">&gt;</span>2019-04-22T00:00:00.0000000<span class="nt">&lt;/d:OP_CERT_VALID_FROM&gt;</span>
+                <span class="nt">&lt;d:OP_CERT_VALID_TO</span>     <span class="na">m:type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">&gt;</span>2020-04-30T00:00:00.0000000<span class="nt">&lt;/d:OP_CERT_VALID_TO&gt;</span>
+                <span class="nt">&lt;d:PURCHASE_DATE</span> <span class="na">m:type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">&gt;</span>2019-04-17T00:00:00.0000000<span class="nt">&lt;/d:PURCHASE_DATE&gt;</span>
+                <span class="nt">&lt;d:DELETE_FLAG</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/d:DELETE_FLAG&gt;</span>
+                <span class="nt">&lt;d:EFENCE_FLAG</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/d:EFENCE_FLAG&gt;</span>
+            <span class="nt">&lt;/m:properties&gt;</span>
+        <span class="nt">&lt;/content&gt;</span>
+    <span class="nt">&lt;/entry&gt;</span>
+<span class="nt">&lt;/feed&gt;</span>
+</pre></div>
+
+<h3 id="entity-vehicle10000000">查看具体的 Entity - Vehicle(10000000)</h3>
+<p>http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/Vehicle(10000000)</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;entry</span> <span class="na">xmlns:d=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2007/08/dataservices&quot;</span> <span class="na">xmlns:m=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2007/08/dataservices/metadata&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span> <span class="na">xml:base=</span><span class="s">&quot;http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;id&gt;</span>
+        http://zhiminipmi.z.com:8000/zhimin/demo/services/demo.xsodata/Vehicle(10000000)
+    <span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;title</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;author&gt;</span>
+        <span class="nt">&lt;name/&gt;</span>
+    <span class="nt">&lt;/author&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;edit&quot;</span> <span class="na">title=</span><span class="s">&quot;Vehicle&quot;</span> <span class="na">href=</span><span class="s">&quot;Vehicle(10000000)&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2007/08/dataservices/related/Fee&quot;</span>       <span class="na">type=</span><span class="s">&quot;application/atom+xml;type=feed&quot;</span> <span class="na">title=</span><span class="s">&quot;Fee&quot;</span> <span class="na">href=</span><span class="s">&quot;Vehicle(10000000)/Fee&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;category</span> <span class="na">term=</span><span class="s">&quot;zhimin.demo.services.VehicleType&quot;</span>       <span class="na">scheme=</span><span class="s">&quot;http://schemas.microsoft.com/ado/2007/08/dataservices/scheme&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;content</span> <span class="na">type=</span><span class="s">&quot;application/xml&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;m:properties&gt;</span>
+            <span class="nt">&lt;d:UID</span> <span class="na">m:type=</span><span class="s">&quot;Edm.Int32&quot;</span><span class="nt">&gt;</span>10000000<span class="nt">&lt;/d:UID&gt;</span>
+            <span class="nt">&lt;d:VIN</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>LFWSRXSJ4KAD14686<span class="nt">&lt;/d:VIN&gt;</span>
+            <span class="nt">&lt;d:ENGINE_NO</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>53170940<span class="nt">&lt;/d:ENGINE_NO&gt;</span>
+            <span class="nt">&lt;d:PLATE_NUMBER</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>豫NR5926<span class="nt">&lt;/d:PLATE_NUMBER&gt;</span>
+            <span class="nt">&lt;d:DOC_NUMBER</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>411401082943<span class="nt">&lt;/d:DOC_NUMBER&gt;</span>
+            <span class="nt">&lt;d:CARD_ID</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>4150028005042<span class="nt">&lt;/d:CARD_ID&gt;</span>
+            <span class="nt">&lt;d:MODEL</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>重型半挂牵引车<span class="nt">&lt;/d:MODEL&gt;</span>
+            <span class="nt">&lt;d:MAKER</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>解放<span class="nt">&lt;/d:MAKER&gt;</span>
+            <span class="nt">&lt;d:LICENSE_VALID_FROM</span>       <span class="na">m:type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">&gt;</span>2019-04-17T00:00:00.0000000<span class="nt">&lt;/d:LICENSE_VALID_FROM&gt;</span>
+            <span class="nt">&lt;d:LICENSE_VALID_TO</span>     <span class="na">m:type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">&gt;</span>2020-04-01T00:00:00.0000000<span class="nt">&lt;/d:LICENSE_VALID_TO&gt;</span>
+            <span class="nt">&lt;d:OP_CERT_NUMBER</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>411406000775<span class="nt">&lt;/d:OP_CERT_NUMBER&gt;</span>
+            <span class="nt">&lt;d:OP_CERT_VALID_FROM</span>       <span class="na">m:type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">&gt;</span>2019-04-22T00:00:00.0000000<span class="nt">&lt;/d:OP_CERT_VALID_FROM&gt;</span>
+            <span class="nt">&lt;d:OP_CERT_VALID_TO</span>     <span class="na">m:type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">&gt;</span>2020-04-30T00:00:00.0000000<span class="nt">&lt;/d:OP_CERT_VALID_TO&gt;</span>
+            <span class="nt">&lt;d:PURCHASE_DATE</span> <span class="na">m:type=</span><span class="s">&quot;Edm.DateTime&quot;</span><span class="nt">&gt;</span>2019-04-17T00:00:00.0000000<span class="nt">&lt;/d:PURCHASE_DATE&gt;</span>
+            <span class="nt">&lt;d:DELETE_FLAG</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/d:DELETE_FLAG&gt;</span>
+            <span class="nt">&lt;d:EFENCE_FLAG</span> <span class="na">m:type=</span><span class="s">&quot;Edm.String&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/d:EFENCE_FLAG&gt;</span>
+        <span class="nt">&lt;/m:properties&gt;</span>
+    <span class="nt">&lt;/content&gt;</span>
+<span class="nt">&lt;/entry&gt;</span>
+</pre></div>
+
+<h2 id="entity-xsodata-258-insufficient-privilege">如果访问具体的 entity 出现 XSOdata [258] insufficient privilege 错误</h2>
+<p><img alt="XSOdata insufficient privilege" src="../images/xsodata_access_insufficient_privilege.png" /></p>
+<p>The user already has EXECUTE, SELECT on shema where odata is created, and on both _SYS_REPO and _SYS_BIC. <a href="https://answers.sap.com/questions/212419/xsodata-258-insufficient-privilege.html">参考链接</a></p>
+<p><img alt="_sys_bi_cp_all" src="../images/_sys_bi_cp_all.png" /></p>
+<h2 id="odata_1">ODATA 协议官方参考</h2>
+<p>SAP 目前 UI5 和 xsodata service 支持 v2 版本的 ODATA 协议， 官方链接 <a href="https://www.odata.org/">https://www.odata.org/</a></p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../data-load/" title="数据导入" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                数据导入
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../view/" title="创建视图" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                创建视图
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 - SAP Cloud Platform
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
